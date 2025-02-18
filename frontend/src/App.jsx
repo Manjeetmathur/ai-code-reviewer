@@ -13,8 +13,8 @@ import "highlight.js/styles/github-dark.css"
 
 
 function App() {
-  // const backlLink = 'https://ai-code-reviewer-backend-puo5.onrender.com'
-  const backlLink = 'http://localhost:3000'
+  const backlLink = 'https://ai-code-reviewer-backend-puo5.onrender.com'
+  // const backlLink = 'http://localhost:3000'
   useEffect(() => {
     prism.highlightAll()
   })
