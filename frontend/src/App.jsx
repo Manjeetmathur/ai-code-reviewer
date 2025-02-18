@@ -13,19 +13,20 @@ import "highlight.js/styles/github-dark.css"
 
 
 function App() {
-
+  // const backlLink = 'https://ai-code-reviewer-backend-puo5.onrender.com'
+  const backlLink = 'http://localhost:3000'
   useEffect(() => {
     prism.highlightAll()
   })
 
-  const [code, setcode] = useState(`//put your code here...`)
+  const [code, setcode] = useState(`//put your code here...\n`)
   const [res, setres] = useState(``)
   const [load, setload] = useState(false)
 
   const review = async () => {
     try {
       setload(true)
-      const data = await axios.post('https://ai-code-reviewer-backend-puo5.onrender.com/ai/get-review', {
+      const data = await axios.post(`${backlLink}/ai/get-review`, {
         code
       })
       const res = data.data
@@ -40,7 +41,7 @@ function App() {
 
   return (
     <div className="">
-      <main className='h-[100vh] p-2 bg-black gap-1'>
+      <main className='h-[100vh] p-2 bg-black gap-1 flex flex-col md:flex-row'>
         <div className="left bg-gray-800  rounded-lg relative overflow-auto">
           <div className="code p-4 pt-18 text-xl">
             <Editor

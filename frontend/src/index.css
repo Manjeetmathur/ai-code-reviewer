@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-main{
-       display: flex;
-}
 main .left , main .right{
        flex-basis: 50%;
 }
