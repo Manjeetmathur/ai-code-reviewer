@@ -105,8 +105,9 @@ const reviewModes = [
 ]
 
 function App () {
-  // const backlLink = 'https://ai-code-reviewer-backend-puo5.onrender.com'
-  const backlLink = 'http://localhost:3000'
+  // Use relative path - Vite proxy handles /ai routes in development
+  // In production, same origin is used
+  const backlLink = ''
   
   const [code, setcode] = useState(`//put your code here...\n`)
   const [res, setres] = useState(``)
