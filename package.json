@@ -8,10 +8,12 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "nodemon server.js",
     "dev:client": "cd client && vite",
-    "build": "npm run build:client",
+    "build": "npm run install:client && npm run build:client",
+    "install:client": "cd client && npm install --legacy-peer-deps",
     "build:client": "cd client && vite build",
     "start": "node server.js",
-    "preview": "npm run build && npm start"
+    "preview": "npm run build && npm start",
+    "postinstall": "cd client && npm install --legacy-peer-deps"
   },
   "keywords": [
     "ai",
