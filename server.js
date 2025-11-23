@@ -22,11 +22,10 @@ if (NODE_ENV === 'production') {
   app.use(express.static(clientBuildPath))
   
   // Handle React routing - return all requests to React app
+  // API routes are handled by /ai/* in src/app.js, so we only need to catch non-API routes
   app.get('*', (req, res) => {
-    // Don't serve index.html for API routes
-    if (req.path.startsWith('/ai/')) {
-      return res.status(404).json({ message: 'API route not found' })
-    }
+    // Don't serve index.html for API routes (they should be handled by Express routes)
+    // Only serve index.html for frontend routes
     res.sendFile(path.join(clientBuildPath, 'index.html'))
   })
 }

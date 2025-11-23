@@ -13,7 +13,12 @@
     "start": "node server.js",
     "preview": "npm run build && npm start"
   },
-  "keywords": ["ai", "code-review", "react", "express"],
+  "keywords": [
+    "ai",
+    "code-review",
+    "react",
+    "express"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -27,6 +32,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^9.0.3",
+    "react-router-dom": "^6.30.2",
     "react-simple-code-editor": "^0.14.1",
     "rehype-highlight": "^7.0.2"
   },
@@ -48,4 +54,3 @@
     "vite": "^6.1.0"
   }
 }
-
